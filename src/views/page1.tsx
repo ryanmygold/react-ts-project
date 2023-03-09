@@ -1,6 +1,6 @@
 
 import { useDispatch, useSelector } from "react-redux";
-
+import numStatus from "@/store/numState/index"
 function Page1() {
     const dispatch = useDispatch();
     //对num的操作
@@ -20,11 +20,12 @@ function Page1() {
     
     const changeNum2 = () => {
         // dispatch({ type: "add2", data:10 })
-        dispatch((dis:Function) => {
-            setTimeout(() => {
-                dis({ type: "add2", data: 10 })
-            }, 1000);
-        })
+        // dispatch((dis:Function) => {
+        //     setTimeout(() => {
+        //         dis({ type: "add2", data: 10 })
+        //     }, 1000);
+        // })
+        dispatch(numStatus.asyncactions.asyncAdd1);
     }
 
     const changeArr = () => {
