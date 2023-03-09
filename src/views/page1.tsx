@@ -13,15 +13,22 @@ function Page1() {
         sarr: state.arrReducer.sarr
     }));
 
-    
+
     const changeNum = () => {
         dispatch({ type: "add1" })
     }
+    
     const changeNum2 = () => {
-        dispatch({ type: "add2", data:10 })
+        // dispatch({ type: "add2", data:10 })
+        dispatch((dis:Function) => {
+            setTimeout(() => {
+                dis({ type: "add2", data: 10 })
+            }, 1000);
+        })
     }
+
     const changeArr = () => {
-            dispatch({ type: "arrpush", data:100 })
+        dispatch({ type: "arrpush", data: 100 })
     }
 
 

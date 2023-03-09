@@ -15,7 +15,7 @@ function rootReducer(state = initialState, action: { type: string, data: number 
     //     default:
     //         break;
     // }
-    for (const item in handNum.actionName) {
+    for (const item in handNum.actionNames) {
         if (item === action.type) {
             handNum.actions[item](newState, action)
             break
