@@ -24,7 +24,7 @@ const routes = [
     // 嵌套路由 开始-------------------
     {
         path: "/",
-        element: <Navigate to="/page1" />
+        element: <Navigate to="/login" />
     },
     {
         path: "/",

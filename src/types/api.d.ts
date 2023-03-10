@@ -21,5 +21,5 @@ interface LoginAPIReq {
 interface LoginAPIRes {
     msg: string;
     code: number;
-    roken: string;
+    token: string;
 }

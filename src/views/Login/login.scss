@@ -1,26 +1,24 @@
+input:-webkit-autofill{
+    // -webkit--shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+    font-family: none;
+}
+
 .loginbox {
 
     // 控制表单元素
     .ant-input,
     .ant-input-password {
 
-        // input:-webkit-autofill,
-        // input:-webkit-autofill:hover,
-        // select:-webkit-autofill,
-        // textarea:-webkit-autofill,
-        // input:-webkit-autofill:focus {
-        //     -webkit-box-shadow: none;
-        //     box-shadow: none;
-        //     background: transparent;
-        //     -webkit-text-fill-color: #fff;
-        //     transition: background-color 5000s ease-in-out 0s;
-        // }
 
         background: rgba(255, 255, 255, 0) !important;
         border-color: #40a9ff;
         color: #fff;
         height: 38px;
+        caret-color:#fff
     }
+
 
     // 控制眼睛图标
     .ant-input-password-icon.anticon,

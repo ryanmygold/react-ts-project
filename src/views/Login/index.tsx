@@ -42,20 +42,20 @@ const Login = () => {
             username: usernameVal,
             password: passwordVal,
             code: captchaVal,
-            uuid: localStorage.getItem("uuid") as string
+            uuid: sessionStorage.getItem("uuid") as string
         });
 
-        console.log(loginAPIRes);
+        console.log("1111",loginAPIRes.token);
 
         if (loginAPIRes.code === 200) {
             //提示登陆成功
             message.success("登陆成功");
             //保存token
-            localStorage.setItem("react-ts-project-token", loginAPIRes.roken);
+            sessionStorage.setItem("react-ts-project-token", loginAPIRes.token);
             //跳转到page1
             navigateTo("/page1")
             //删除uuid
-            localStorage.removeItem("uuid")
+            sessionStorage.removeItem("uuid")
         }
 
     }
@@ -72,7 +72,7 @@ const Login = () => {
             // 1.把图片数据显示在img上
             setCaptchaImg("data:image/gif;base64," + captchaAPIRes.img);
             // 2.本地保存uuid给登录的时候用
-            localStorage.setItem("uuid", captchaAPIRes.uuid)
+            sessionStorage.setItem("uuid", captchaAPIRes.uuid)
         }
 
 
